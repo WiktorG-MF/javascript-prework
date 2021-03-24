@@ -2,6 +2,12 @@ const buttonRock = document.getElementById('button-rock');
 const buttonPaper = document.getElementById('button-paper');
 const buttonScissors = document.getElementById('button-scissors');
 
+let  playerScore = 0, computerScore = 0;
+
+function addPoints(playerScore, computerScore){
+	printMessage("Wynik: P" + playerScore + "- K" + computerScore)
+}
+
 function buttonClicked(argButtonName) {
 	let argMoveId;
   clearMessages();
@@ -25,19 +31,36 @@ function buttonClicked(argButtonName) {
 	if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
 		  printMessage('Wygrywasz!');
 		  printMessage("zagrałeś " + argPlayerMove + " a ja " + argComputerMove)
+		  playerScore = playerScore + 1;
+		  addPoints(playerScore,computerScore);
+		  return playerScore;
 	  }else if (argPlayerMove == "kamień" && argComputerMove == "nożyce"){
 		  printMessage("Wygrałeś!")
 		  printMessage("zagrałeś " + argPlayerMove + " a ja " + argComputerMove)
+		  playerScore = playerScore + 1;
+		  addPoints(playerScore,computerScore);
+		  return playerScore;
 	  }else if (argPlayerMove == "nożyce" && argComputerMove == "papier"){
 		  printMessage("Wygrałeś!")
 		  printMessage("zagrałeś " + argPlayerMove + " a ja " + argComputerMove)
+		  playerScore = playerScore + 1;
+		  addPoints(playerScore,computerScore);
+		  return playerScore;
 	  }else if (argPlayerMove == argComputerMove){
 		  printMessage("remis O.o")
 		  printMessage("zagrałeś " + argPlayerMove + " a ja " + argComputerMove)
+		  playerScore = playerScore + 1;
+		  addPoints(playerScore,computerScore);
+		  return playerScore;
 	  }else {
 		  printMessage("Przegrałeś")
 		  printMessage("zagrałeś " + argPlayerMove + " a ja " + argComputerMove)
+		  computerScore = computerScore + 1;
+		  addPoints(playerScore,computerScore);
+		  return computerScore;
 	  }
+	  
+	  
   }
   const playerMove = argButtonName
   console.log('ruch gracza to: ' + playerMove);
