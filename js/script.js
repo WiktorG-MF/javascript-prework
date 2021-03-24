@@ -21,7 +21,7 @@ function buttonClicked(argButtonName) {
 		printMessage("nieznany ruch")
 	}
   }
-  
+
   function displayResult(argPlayerMove, argComputerMove) {
 	console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
 	if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
@@ -49,7 +49,7 @@ function buttonClicked(argButtonName) {
   console.log('ruch komputera to: ' + computerMove);
   displayResult(playerMove, computerMove);
 }
-buttonTest.addEventListener('click', function(){ buttonClicked('Guzik Test'); });
+
 buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
 buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
-buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
+buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); }); 
