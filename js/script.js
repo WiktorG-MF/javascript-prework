@@ -9,7 +9,6 @@ function addPoints(playerScore, computerScore){
 }
 
 function buttonClicked(argButtonName) {
-	let argMoveId;
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
   function getMoveName(argMoveId) {
@@ -25,7 +24,6 @@ function buttonClicked(argButtonName) {
 	}
   }
 
-  let argPlayerMove, argComputerMove;
   function displayResult(argPlayerMove, argComputerMove) {
 	console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
 	if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
